@@ -1,0 +1,10 @@
+#!/bin/sh
+# Gets Dracula Icons and puts them into $HOME/.icons directory
+echo "Getting Dracula theme icons"
+
+curl -L https://github.com/dracula/gtk/files/5214870/Dracula.zip --create-dirs -o ~/Downloads/zips/dracula-icons.zip
+
+echo "Unzipping the icons"
+unzip ~/Downloads/zips/dracula-icons.zip -d ~/.icons
+
+echo "Icons have been unzipped and are now ready to use"

@@ -1,0 +1,10 @@
+#!/bin/sh
+# Copies the filenames of a specified directory withou their contents
+echo $1
+filenames=`ls "$1"`
+echo $filenames
+for f in $filenames; do
+    touch "$2/$f"
+done
+
+echo "Finished copying only the filenames of the specified directory. Verify the files are empty using 'bat' or 'cat'.\n$(ls $2)"

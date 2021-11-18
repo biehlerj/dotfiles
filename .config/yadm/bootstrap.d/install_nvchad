@@ -1,0 +1,11 @@
+#!/bin/sh
+# Installs NvChad and adds my personal configs
+echo "Installing NvChad"
+
+git clone https://github.com/NvChad/NvChad ~/.config/nvim
+nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+
+echo "Adding custom NvChad configs"
+cp -r "$DOTFILES_HOME/NvChad/custom" "$XDG_CONFIG_HOME/nvim/lua/"
+
+echo "NvChad is all setup"

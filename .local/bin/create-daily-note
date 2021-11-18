@@ -1,0 +1,3 @@
+#!/bin/sh
+# Creates a note with the provided string and the date it was called
+touch "$(date +%F)_$1"

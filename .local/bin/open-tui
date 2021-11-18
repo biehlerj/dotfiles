@@ -1,0 +1,11 @@
+#!/bin/bash
+tool=$1
+loc="$2"
+loc=${loc#"file://"}
+
+if [[ ! -e $loc ]]; then
+    loc=$(dirname "$loc")
+fi
+
+exec 'kitty @ launch '$tool' "'$loc'"'
+#st -e $tool $loc  # If you used st with dwm

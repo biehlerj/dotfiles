@@ -1,0 +1,9 @@
+#!/bin/sh
+# Wrapper script for getting the definition of a word from Urbandictionary
+new_word=$(xsel)
+testseq=" "
+if [ "${new_word##*"$testseq"*}" ]; then
+    new_word=$(printf "%s\n" "$new_word" | sed 's/ /-/g')
+fi
+boomer_helper.py >>"$HOME/Documents/urbandictionary_definitions/$new_word.json"
+less "$HOME/Documents/urbandictionary_definitions/$new_word.json"

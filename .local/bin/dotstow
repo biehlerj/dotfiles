@@ -1,0 +1,11 @@
+#!/bin/sh
+# Dotstow - Backup your chosen dotfiles in one go using stow.
+# Run it outside of the folder/file you want to back up
+# $ dotstow file-or-program
+# This program was adapted from a script by joelchrono12
+
+NEW_DIR="$STOW_DIR/$1/.config/"
+mkdir -pv "$NEW_DIR"
+mv -v "${XDG_CONFIG_HOME:-$HOME/.config}/$1" "$NEW_DIR"
+cd "$STOW_DIR" || exit
+stow -vt ~ "$1"

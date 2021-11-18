@@ -1,0 +1,39 @@
+#!/usr/bin/env sh
+# Creates a new script with a shebang and opens it up in your $EDITOR
+script_editor="$EDITOR"
+filename="$1"
+env="$2"
+
+usage() {
+  echo $(basename $0): ERROR: $* 1>&2
+  echo usage: $(basename $0) '[FILE]' '[ENV]' 1>&2
+  echo "The ENV argument is the environment that the script will use (ie python3, sh, bash, etc.)"
+  echo If the FILE provided already exists the script will exit with an error
+}
+
+main() {
+  if [ "$#" -lt 2 ]; then
+    usage
+    exit 1
+  fi
+  if [ -z "$script_editor" ]; then
+    script_editor="vi"
+  fi
+  if [ -f "$filename" ]; then
+    usage
+    exit 1
+  fi
+  if [ -z "$env" ]; then
+    usage
+    exit 1
+  fi
+  if [ "$env" = "sh" ]; then
+    echo "#!/bin/sh" >"$filename"
+  else
+    echo "#!/usr/bin/env $env" >"$filename"
+  fi
+  "$script_editor" "$filename"
+  exit 0
+}
+
+main "$@"

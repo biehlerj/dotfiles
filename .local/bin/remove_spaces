@@ -1,0 +1,4 @@
+#!/bin/sh
+# Remove spaces from file names
+mv -v "$f" "${1// /_}"
+exit 0

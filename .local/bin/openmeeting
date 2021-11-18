@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+# Opens the given url using xdg-open in preferred application
+if ! command -v xdg-open >/dev/null; then
+    echo "Please install xdg-open with your system's package manager (ie pacman -S xdg-utils for Arch based distros)"
+    exit 1
+fi
+export DISPLAY=:1 &&
+    [ -z "$1" ] &&
+    echo Please provide the URL to open &&
+    exit 1 ||
+    xdg-open "$1" >/dev/null 2>&1 &

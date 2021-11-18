@@ -1,0 +1,12 @@
+#!/bin/sh
+# Creates a gitignore file for the specified language in the current directory
+# Creates the gitignore from https://github.com/github/gitignore
+STATUS=$(curl -s -o /dev/null -w '%{http_code}' "https://raw.githubusercontent.com/github/gitignore/master/$1.gitignore")
+if [ $STATUS -eq 404 ]; then
+    echo "Provided language $1 does not exist in the repo, please try another language"
+    exit 1
+else
+    curl -sS "https://raw.githubusercontent.com/github/gitignore/master/$1.gitignore" >> .gitignore
+    echo "Gitignore successfully created in $PWD/.gitignore"
+    exit
+fi

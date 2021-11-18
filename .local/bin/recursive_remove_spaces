@@ -1,0 +1,5 @@
+#!/bin/sh
+# Recursively removes spaces from files and directories in the given directory
+find "$1" -name "* *" -print0 | sort -rz | \
+    while read -d $'\0' f; do mv -v "$f" "$(dirname "$f")/$(basename "${f// /_}")"; done
+    exit 0

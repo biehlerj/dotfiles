@@ -1,0 +1,45 @@
+#!/bin/sh
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# Colorize commands when possible.
+alias \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	ka="killall" \
+	g="git" \
+	sdn="sudo shutdown -h now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	c="code" \
+	cde="code ." \
+	zt="zathura"
+
+alias \
+	magit="nvim -c MagitOnly" \
+	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
+	btm="btm -g --battery" \
+	cnp="commitandpush" \
+	sp="speedtest" \
+	firmware="sudo fwupdmgr update -y --no-reboot-check" \
+	up="aguu -y && agar -y" \
+	pop_os_up="up && flatpak upgrade -y && firmware" \
+	ubuntu_up="up && sudo ubuntu-drivers install && firmware" \
+	rr="SHELL=$HOME/.local/bin/r.shell ranger" \
+	vs="v -O" \
+	sp="v -o"

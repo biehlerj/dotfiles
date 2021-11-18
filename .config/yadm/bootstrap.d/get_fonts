@@ -1,0 +1,12 @@
+#!/bin/sh
+# Gets Nerd Fonts
+echo "Getting Jetbrains Mono Nerd Font" 
+curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip --create-dirs -o ~/Downloads/zips/JetBrainsMono.zip
+
+echo "Unzipping fonts"
+unzip ~/Downloads/zips/JetBrainsMono.zip -d ~/.fonts
+
+echo "Rebuilding the font cache"
+fc-cache -v
+
+echo "The fonts have been successfully downloaded, unzipped, and setup"
