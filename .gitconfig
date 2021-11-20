@@ -1,10 +1,11 @@
 [user]
   name = Jacob Biehler
   email = biehlerj@protonmail.com
+  signingkey = 7229A53DE490A0D3
 [gpg]
-  program = gpg2
+  ; program = gpg2
 [commit]
-  gpgsign = true
+  ; gpgsign = true
 [core]
   pager = delta
 [interactive]
@@ -17,4 +18,4 @@
 [mergetool "nvim"]
   cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
 [pull]
-	rebase = true
+  rebase = true

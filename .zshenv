@@ -40,7 +40,6 @@ export DOCKER_CLIENT_TIMEOUT=120
 export COMPOSE_HTTP_TIMEOUT=120
 export RANGER_LOAD_DEFAULT_RC=false
 
-
 # Personal path configs
 export DEV_HOME="$HOME/dev"
 export DOTFILES_HOME="$DEV_HOME/git.sr.ht/biehlerj/dotfiles"

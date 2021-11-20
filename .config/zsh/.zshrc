@@ -153,7 +153,6 @@ eval "$(starship init zsh)"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
-export PATH="$PATH:$HOME/code/professional/gitlab.moesol.com/ctm-scripts/bin/"
 
 "pfetch"
 
