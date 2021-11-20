@@ -1,7 +1,7 @@
 -- This is where your custom modules and plugins go.
 -- See the wiki for a guide on how to extend NvChad
 
-local hooks = require("core.hooks")
+local hooks = require "core.hooks"
 
 -- NOTE: To use this, make a copy with `cp example_init.lua init.lua`
 
@@ -27,9 +27,9 @@ local hooks = require("core.hooks")
 -- end)
 
 hooks.add("setup_mappings", function(map)
-	map("n", ";", ":", { noremap = true, silent = true })
-	map("n", ":", ";", { noremap = true, silent = true })
-	map("n", "<leader>c", ":w! | !compiler '<c-r>%'<cr>", { noremap = true, silent = true })
+   map("n", ";", ":", { noremap = true, silent = true })
+   map("n", ":", ";", { noremap = true, silent = true })
+   map("n", "<leader>c", ":w! | !compiler '<c-r>%'<cr>", { noremap = true, silent = true })
 end)
 -- To add new plugins, use the "install_plugin" hook,
 -- NOTE: we heavily suggest using Packer's lazy loading (with the 'event' field)
@@ -37,31 +37,42 @@ end)
 -- examples below:
 
 hooks.add("install_plugins", function(use)
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-		after = "nvim-lspconfig",
-		config = function()
-			require("custom.plugin_confs.null-ls").setup()
-		end,
-	})
-	use("vimwiki/vimwiki")
-	use("wakatime/vim-wakatime")
-	use({
-		"lervag/vimtex",
-		after = "nvim-lspconfig",
-		ft = "tex",
-		config = function()
-			require("custom.plugin_confs.vimtex")
-		end,
-	})
-	--    use {
-	--       "max397574/better-escape.nvim",
-	--       event = "InsertEnter",
-	--    }
+   use {
+      "jose-elias-alvarez/null-ls.nvim",
+      after = "nvim-lspconfig",
+      config = function()
+         require("custom.plugin_confs.null-ls").setup()
+      end,
+   }
+   use {
+      "vimwiki/vimwiki",
+      config = function()
+         require "custom.plugin_confs.vimwiki"
+      end,
+   }
+   use "wakatime/vim-wakatime"
+   use {
+      "lervag/vimtex",
+      after = "nvim-lspconfig",
+      ft = "tex",
+      config = function()
+         require "custom.plugin_confs.vimtex"
+      end,
+   }
+   use {
+      "luukvbaal/stabilize.nvim",
+      config = function()
+         require("stabilize").setup()
+      end,
+   }
+   --    use {
+   --       "max397574/better-escape.nvim",
+   --       event = "InsertEnter",
+   --    }
 end)
 
 -- alternatively, put this in a sub-folder like "lua/custom/plugins/mkdir"
 -- then source it with
 
 -- require "custom.plugins.mkdir"
-require("custom.autochad_cmds")
+require "custom.autochad_cmds"
