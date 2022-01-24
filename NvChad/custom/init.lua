@@ -1,7 +1,8 @@
 -- This is where your custom modules and plugins go.
 -- See the wiki for a guide on how to extend NvChad
 
-local hooks = require "core.hooks"
+local customPlugins = require "core.customPlugins"
+local map = require("core.utils").map
 
 -- NOTE: To use this, make a copy with `cp example_init.lua init.lua`
 
@@ -25,18 +26,15 @@ local hooks = require "core.hooks"
 --    map("n", "<leader>cc", "gg0vG$d", opt) -- example to delete the buffer
 --    .... many more mappings ....
 -- end)
-
-hooks.add("setup_mappings", function(map)
-   map("n", ";", ":", { noremap = true, silent = true })
-   map("n", ":", ";", { noremap = true, silent = true })
-   map("n", "<leader>c", ":w! | !compiler '<c-r>%'<cr>", { noremap = true, silent = true })
-end)
+map("n", ";", ":", { noremap = true, silent = true })
+map("n", ":", ";", { noremap = true, silent = true })
+map("n", "<leader>c", ":w! | !compiler '<c-r>%'<cr>", { noremap = true, silent = true })
 -- To add new plugins, use the "install_plugin" hook,
 -- NOTE: we heavily suggest using Packer's lazy loading (with the 'event' field)
 -- see: https://github.com/wbthomason/packer.nvim
 -- examples below:
 
-hooks.add("install_plugins", function(use)
+customPlugins.add("install_plugins", function(use)
    use {
       "jose-elias-alvarez/null-ls.nvim",
       after = "nvim-lspconfig",
