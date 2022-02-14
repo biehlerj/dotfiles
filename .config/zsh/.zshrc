@@ -134,8 +134,6 @@ export PATH="$PATH:/usr/local/go/bin"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-source $HOME/.config/broot/launcher/bash/br
-
 # Source funky shell functions
 [ -f ~/.local/share/funky/funky.sh ] && source ~/.local/share/funky/funky.sh
 

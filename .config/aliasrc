@@ -38,7 +38,7 @@ alias \
 	sp="speedtest" \
 	firmware="sudo fwupdmgr update -y --no-reboot-check" \
 	up="aguu -y && agar -y" \
-	pop_os_up="up && flatpak upgrade -y && firmware" \
+	pop_os_up="topgrade && agar -y" \
 	ubuntu_up="up && sudo ubuntu-drivers install && firmware" \
 	rr="SHELL=$HOME/.local/bin/r.shell ranger" \
 	vs="v -O" \
