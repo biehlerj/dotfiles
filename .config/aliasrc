@@ -2,6 +2,9 @@
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
 
+# Replace docker with podman if podman is installed
+[ -x "$(command -v podman)" ] && alias docker="podman"
+
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
 	cp="cp -iv" \
@@ -26,8 +29,8 @@ alias \
 	f="$FILE" \
 	e="$EDITOR" \
 	v="$EDITOR" \
-	c="code" \
-	cde="code ." \
+	c="codium" \
+	cde="codium ." \
 	zt="zathura"
 
 alias \
@@ -36,10 +39,9 @@ alias \
 	btm="btm -g --battery" \
 	cnp="commitandpush" \
 	sp="speedtest" \
-	firmware="sudo fwupdmgr update -y --no-reboot-check" \
-	up="aguu -y && agar -y" \
-	pop_os_up="topgrade && agar -y" \
-	ubuntu_up="up && sudo ubuntu-drivers install && firmware" \
+	pop_os_up="topgrade ; agar -y" \
+	ubuntu_up="topgrade ; sudo ubuntu-drivers install" \
 	rr="SHELL=$HOME/.local/bin/r.shell ranger" \
 	vs="v -O" \
-	sp="v -o"
+	sp="v -o" \
+	vwg="vimwiki-git"
