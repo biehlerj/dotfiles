@@ -7,16 +7,6 @@ return {
       config = function()
          require "custom.plugins.lspconfig"
       end,
-
-      -- lazy load!
-      setup = function()
-         require("core.utils").packer_lazy_load "nvim-lsp-installer"
-         -- reload the current file so lsp actually starts for it
-         vim.defer_fn(function()
-            vim.cmd 'if &ft == "packer" | echo "" | else | silent! e %'
-         end, 0)
-      end,
-      opt = true,
    },
    {
       "jose-elias-alvarez/null-ls.nvim",
