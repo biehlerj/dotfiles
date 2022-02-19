@@ -64,19 +64,6 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# Interface for vimwiki to interact with git or open vimwiki index
-vimwiki () {
-    if [[ $# == 0 ]]
-    then
-        nvim +'VimwikiIndex'
-    elif [[ $1 == 'git' ]]
-    then
-        git -C ~/vimwiki/ ${@:2}
-    else
-        echo 'Usage: vimwiki [git] [args ...]'
-    fi
-}
-
 function ranger {
     local IFS=$'\t\n'
     local tempfile="$(mktemp -t tmp.XXXXXX)"
@@ -106,6 +93,10 @@ bindkey '^[[P' delete-char
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+# fnm
+export PATH="${XDG_DATA_HOME:-$HOME/.local/share}/fnm:$PATH"
+eval "`fnm env --use-on-cd`"
+
 if [ -d "$HOME/.local/share/pyenv" ]; then
   export PATH="$HOME/.local/share/pyenv/bin:$PATH"
   eval "$(pyenv init -)"
@@ -120,19 +111,24 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 source ~/.config/zsh/plugins/git.zsh
 source ~/.config/zsh/plugins/git.plugin.zsh
-source ~/.config/zsh/plugins/ubuntu.plugin.zsh
+if [[ "$(command -v apt)" || "$(command -v apt-get)" ]]; then
+  source ~/.config/zsh/plugins/ubuntu.plugin.zsh
+elif [[ "$(command -v dnf)" || "$(command -v yum)" ]]; then
+  source ~/.config/zsh/plugins/dnf.plugin.zsh
+else
+  source ~/.config/zsh/plugins/archlinux.plugin.zsh
+fi
 source ~/.config/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.config/zsh/plugins/command-not-found.plugin.zsh
 fpath=("$HOME/.config/zsh/plugins/zsh-completions/src" $fpath)
 eval "$(starship init zsh)"
 
+eval "$(thefuck --alias)"
+
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 
-"pfetch"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+${${(A)=:-pfetch neofetch}[RANDOM%2+1]}
 
 # Source funky shell functions
 [ -f ~/.local/share/funky/funky.sh ] && source ~/.local/share/funky/funky.sh
