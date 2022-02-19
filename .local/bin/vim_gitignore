@@ -1,0 +1,4 @@
+#!/bin/sh
+# Adds Vim files to gitignore
+curl -sS "https://raw.githubusercontent.com/github/gitignore/main/Global/Vim.gitignore" >>.gitignore
+echo "Gitignore successfully added Vim ignore settings to $PWD/.gitignore"

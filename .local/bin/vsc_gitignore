@@ -1,0 +1,4 @@
+#!/bin/sh
+# Adds Visual Studio code files to .gitignore in called directory
+curl -sS "https://raw.githubusercontent.com/github/gitignore/main/Global/VisualStudioCode.gitignore" >>.gitignore
+echo "Gitignore successfully added Visual Stuido Code ignore settings to $PWD/.gitignore"

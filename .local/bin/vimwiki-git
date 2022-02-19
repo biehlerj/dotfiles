@@ -1,0 +1,11 @@
+#!/bin/sh
+# Script to add, commit, and push changes to vimwiki
+if [ -z "$1" ]; then
+	echo "Please provide a commit message" &&
+		exit 1
+fi
+
+vimwiki git add --all &&
+	vimwiki git commit -m "$1" &&
+	vimwiki git push origin master &&
+	exit 0

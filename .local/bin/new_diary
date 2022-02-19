@@ -1,0 +1,58 @@
+#!/bin/sh
+# Creates a new diary entry for the day
+diary_dir="$HOME/vimwiki/diary"
+diary_template="$HOME/vimwiki/diary_template.wiki"
+curr_date=$(date +'%Y-%m-%d')
+note_editor=""
+
+set_editor() {
+	if [ -z "$EDITOR" ]; then
+		note_editor="nvim"
+	else
+		note_editor="$EDITOR"
+	fi
+}
+
+create_diary() {
+	if [ ! -f "$diary_dir/$curr_date.wiki" ]; then
+		cp "$diary_template" "$diary_dir/$curr_date.wiki"
+	else
+		echo "File already exists"
+		exit 1
+	fi
+}
+
+open_diary() {
+	if [ -f "$diary_dir/$curr_date.wiki" ]; then
+		"$note_editor" "$diary_dir/$curr_date.wiki"
+	else
+		echo "File does not exist"
+		exit 1
+	fi
+}
+
+main() {
+	if [ -z "$1" ]; then
+		create_diary
+	else
+		case "$1" in
+		"create")
+			create_diary
+			exit 0
+			;;
+		"edit")
+			set_editor
+			create_diary
+			open_diary
+			exit 0
+			;;
+		"open")
+			set_editor
+			open_diary
+			exit 0
+			;;
+		esac
+	fi
+}
+
+main "$@"

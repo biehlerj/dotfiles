@@ -1,0 +1,4 @@
+#!/bin/sh
+# Adds JetBrains gitignore settings to gitignore
+curl -sS "https://raw.githubusercontent.com/github/gitignore/main/Global/JetBrains.gitignore" >>.gitignore
+echo "Gitignore successfully added JetBrains ignore settings to $PWD/.gitignore"
