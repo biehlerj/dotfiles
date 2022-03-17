@@ -7,9 +7,6 @@
 [submodule "vimwiki"]
 	path = vimwiki
 	url = git@gitlab.com:biehlerj/vimwiki.git
-[submodule ".config/btop/themes/catppuccin"]
-	path = .config/btop/themes/catppuccin
-	url = https://github.com/catppuccin/btop.git
 [submodule ".config/ranger/plugins/zoxide"]
 	path = .config/ranger/plugins/zoxide
 	url = git@github.com:jchook/ranger-zoxide.git
