@@ -42,7 +42,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 
 # Personal path configs
 export DEV_HOME="$HOME/dev"
-export DOTFILES_HOME="$DEV_HOME/git.sr.ht/biehlerj/dotfiles"
+export DOTFILES_HOME="$DEV_HOME/gitlab.com/biehlerj/dotfiles"
 
 # Set default apps
 export BROWSER="brave-browser"
