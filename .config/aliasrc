@@ -29,8 +29,8 @@ alias \
 	f="$FILE" \
 	e="$EDITOR" \
 	v="$EDITOR" \
-	c="codium" \
-	cde="codium ." \
+	c="code" \
+	cde="code ." \
 	zt="zathura"
 
 alias \
