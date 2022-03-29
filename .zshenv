@@ -45,7 +45,7 @@ export FNM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/fnm"
 
 # Personal path configs
 export DEV_HOME="$HOME/dev"
-export DOTFILES_HOME="$DEV_HOME/gitlab.com/biehlerj/dotfiles"
+export DOTFILES_HOME="$DEV_HOME/github.com/biehlerj/dotfiles"
 
 # Set default apps
 export BROWSER="brave-browser"
