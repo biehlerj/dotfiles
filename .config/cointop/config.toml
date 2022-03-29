@@ -1,21 +1,30 @@
 currency = "USD"
 default_view = "default"
+default_chart_range = "1Y"
 api = "coingecko"
 colorscheme = "synthwave"
 refresh_rate = 60
 cache_dir = "/tmp"
+compact_notation = false
+enable_mouse = true
 
 [shortcuts]
+  "!" = "sort_column_cost"
+  "#" = "sort_column_pnl_percent"
   "$" = "last_page"
   "%" = "sort_column_percent_holdings"
+  "+" = "show_price_alert_add_menu"
   "/" = "open_search"
   0 = "first_page"
   1 = "sort_column_1h_change"
   2 = "sort_column_24h_change"
+  3 = "sort_column_30d_change"
   7 = "sort_column_7d_change"
   "<" = "previous_page"
   ">" = "next_page"
   "?" = "help"
+  "@" = "sort_column_pnl"
+  A = "toggle_price_alerts"
   C = "show_currency_convert_menu"
   E = "show_portfolio_edit_menu"
   F = "toggle_show_favorites"
@@ -50,6 +59,7 @@ cache_dir = "/tmp"
   "ctrl+p" = "previous_page"
   "ctrl+r" = "refresh"
   "ctrl+s" = "save"
+  "ctrl+space" = "toggle_portfolio_balances"
   "ctrl+u" = "page_up"
   down = "move_down"
   e = "show_portfolio_edit_menu"
@@ -80,16 +90,33 @@ cache_dir = "/tmp"
   u = "sort_column_last_updated"
   up = "move_up"
   v = "sort_column_24h_volume"
+  y = "sort_column_1y_change"
   "{" = "first_chart_range"
+  "|" = "toggle_chart_fullscreen"
   "}" = "last_chart_range"
 
 [favorites]
-  names = ["LBRY Credits", "Theta Network", "Dash", "Basic Attention Token", "Ethereum"]
+  character = "*"
+  columns = ["rank", "name", "symbol", "price", "1h_change", "24h_change", "7d_change", "24h_volume", "market_cap", "available_supply", "total_supply", "last_updated"]
+  compact_notation = false
+  names = ["Basic Attention Token", "Dash", "Ethereum", "LBRY Credits", "Theta Network"]
 
 [portfolio]
-  "Basic Attention Token" = 246.07434
-  Dash = 0.00032
-  "LBRY Credits" = 170.7310185
+  columns = ["rank", "name", "symbol", "price", "holdings", "balance", "1h_change", "24h_change", "7d_change", "percent_holdings", "cost_price", "cost", "pnl", "pnl_percent", "last_updated"]
+  compact_notation = false
+  holdings = [["Basic Attention Token", "246.07434", "0", ""], ["Dash", "0.00032", "0", ""], ["LBRY Credits", "170.7310185", "0", ""]]
+
+[price_alerts]
+  alerts = []
 
 [coinmarketcap]
   pro_api_key = ""
+
+[table]
+  columns = ["rank", "name", "symbol", "price", "1h_change", "24h_change", "7d_change", "24h_volume", "market_cap", "available_supply", "total_supply", "last_updated"]
+  compact_notation = false
+  keep_row_focus_on_sort = false
+
+[chart]
+  height = 10
+  max_width = 175
