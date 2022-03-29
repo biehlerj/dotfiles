@@ -1,8 +1,8 @@
-currency = "USD"
+currency = "SATS"
 default_view = "default"
 default_chart_range = "1Y"
 api = "coingecko"
-colorscheme = "synthwave"
+colorscheme = "system"
 refresh_rate = 60
 cache_dir = "/tmp"
 compact_notation = false
