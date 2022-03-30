@@ -2,9 +2,6 @@
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
 
-# Replace docker with podman if podman is installed
-[ -x "$(command -v podman)" ] && alias docker="podman"
-
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
 	cp="cp -iv" \
