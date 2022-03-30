@@ -6,13 +6,13 @@
 	url = https://github.com/alexanderjeurissen/ranger_devicons.git
 [submodule "vimwiki"]
 	path = vimwiki
-	url = git@gitlab.com:biehlerj/vimwiki.git
+	url = git@github.com:biehlerj/vimwiki.git
 [submodule ".config/ranger/plugins/zoxide"]
 	path = .config/ranger/plugins/zoxide
 	url = git@github.com:jchook/ranger-zoxide.git
 [submodule ".local/bin/secret-scripts"]
 	path = .local/bin/secret-scripts
-	url = git@gitlab.com:biehlerj/private-scripts.git
+	url = git@github.com:biehlerj/private-scripts.git
 [submodule ".config/zathura/catppuccin"]
 	path = .config/zathura/catppuccin
 	url = https://github.com/catppuccin/zathura.git
