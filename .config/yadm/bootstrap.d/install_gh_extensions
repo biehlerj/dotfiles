@@ -1,0 +1,5 @@
+#!/bin/sh
+# Installs gh extensions I use
+while IFS='' read -r LINE || [ -n "${LINE}" ]; do
+    gh extension install ${LINE}
+done < $HOME/gh_extensions.txt
