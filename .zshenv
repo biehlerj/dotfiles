@@ -47,6 +47,9 @@ export FNM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/fnm"
 export DEV_HOME="$HOME/dev"
 export DOTFILES_HOME="$DEV_HOME/github.com/biehlerj/dotfiles"
 
+# Vultr API Key using 1Password
+export VULTR_API_KEY=op://dev/Vultr/Keys/VULTR_API_KEY
+
 # Set default apps
 export BROWSER="brave-browser"
 export COLORTERM="truecolor"
