@@ -106,9 +106,6 @@ fi
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 eval "$(zoxide init zsh)"
 
-# 1Password CLI
-eval "$(op completion zsh)"; compdef _op op
-
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
