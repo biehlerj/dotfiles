@@ -33,3 +33,9 @@ Make sure yadm is installed and run `yadm clone --bootstrap https://github.com/b
 - [gh-token](https://github.com/Link-/gh-token)
 - [gh-user-stars](https://github.com/korosuke613/gh-user-stars)
 - [gh-userfetch](https://github.com/sheepla/gh-userfetch)
+
+## Using 1Password to manage secrets
+
+With new versions of the 1Password CLI you can use `export SOME_ENVIRONMENT_VARIABLE=op://vault/item/[section/]field op run -- some command`
+
+See the [1Password Developer Documentation](https://developer.1password.com/docs/cli/secrets-environment-variables/) for more information
