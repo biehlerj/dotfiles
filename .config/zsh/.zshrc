@@ -12,6 +12,9 @@ HISTFILE=~/.cache/zsh/history
 # Load aliases and shortcuts if existent.
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
 
+# Load lf icons file if it exists
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/lf_icons" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/lf_icons"
+
 # Basic auto/tab complete:
 autoload -Uz compinit
 zstyle ':completion:*' menu select
@@ -64,22 +67,11 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-function ranger {
-    local IFS=$'\t\n'
-    local tempfile="$(mktemp -t tmp.XXXXXX)"
-    local ranger_cmd=(
-        command
-        ranger
-        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
-    )
-    
-    ${ranger_cmd[@]} "$@"
-    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
-        cd -- "$(cat "$tempfile")" || return
-    fi
-    command rm -f -- "$tempfile" 2>/dev/null
-}
-bindkey -s '^o' 'rr\n'
+LFCD="${XDG_CONFIG_HOME:-$HOME/.config}/lf/lfcd.sh"
+if [ -f "$LFCD" ]; then
+    source "$LFCD"
+fi
+bindkey -s '^o' 'lfcd\n'
 
 bindkey -s '^h' 'bc -l\n'
 
@@ -122,6 +114,7 @@ source ~/.config/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.config/zsh/plugins/command-not-found.plugin.zsh
 source ~/.config/zsh/plugins/1password.plugin.zsh
 fpath=("$HOME/.config/zsh/plugins/zsh-completions/src" $fpath)
+fpath=("$HOME/.config/zsh/completion" $fpath)
 eval "$(starship init zsh)"
 
 eval "$(thefuck --alias)"
