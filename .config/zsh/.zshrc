@@ -123,6 +123,7 @@ else
 fi
 source ~/.config/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.config/zsh/plugins/command-not-found.plugin.zsh
+source ~/.config/zsh/plugins/1password.plugin.zsh
 fpath=("$HOME/.config/zsh/plugins/zsh-completions/src" $fpath)
 eval "$(starship init zsh)"
 
