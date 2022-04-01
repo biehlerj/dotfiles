@@ -38,6 +38,7 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export JDTLS_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/nvim/lspinstall/java" 
 export DOCKER_CLIENT_TIMEOUT=120
 export DOCKER_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/docker"
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export COMPOSE_HTTP_TIMEOUT=120
 export RANGER_LOAD_DEFAULT_RC=false
 export NEXT_TELEMETRY_DISABLED=1
