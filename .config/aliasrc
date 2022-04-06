@@ -36,7 +36,6 @@ alias \
 	btm="btm -g --battery" \
 	cnp="commitandpush" \
 	sp="speedtest" \
-	pop_os_up="topgrade ; agar -y" \
 	ubuntu_up="topgrade ; sudo ubuntu-drivers install" \
 	rr="SHELL=$HOME/.local/bin/r.shell ranger" \
 	vs="v -O" \
