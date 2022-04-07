@@ -2,6 +2,7 @@ mislav/gh-branch
 johnmanjiro13/gh-bump
 matt-bartel/gh-clone-org
 mislav/gh-cp
+dlvhdr/gh-dash
 kawarimidoll/gh-graph
 redraw/gh-install
 heaths/gh-label
