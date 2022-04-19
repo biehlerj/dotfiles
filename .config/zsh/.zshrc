@@ -67,22 +67,7 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-function ranger {
-    local IFS=$'\t\n'
-    local tempfile="$(mktemp -t tmp.XXXXXX)"
-    local ranger_cmd=(
-        command
-        ranger
-        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
-    )
-
-    ${ranger_cmd[@]} "$@"
-    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
-        cd -- "$(cat "$tempfile")" || return
-    fi
-    command rm -f -- "$tempfile" 2>/dev/null
-}
-bindkey -s '^o' 'rr\n'
+bindkey -s '^o' 'xcd\n'
 
 bindkey -s '^h' 'bc -l\n'
 
@@ -130,7 +115,6 @@ eval "$(thefuck --alias)"
 
 eval "$(op signin)"
 
-export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 
 ${${(A)=:-pfetch neofetch}[RANDOM%2+1]}

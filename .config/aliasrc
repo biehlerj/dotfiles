@@ -40,4 +40,5 @@ alias \
 	rr="SHELL=$HOME/.local/bin/r.shell ranger" \
 	vs="v -O" \
 	sp="v -o" \
-	vwg="vimwiki-git"
+	vwg="vimwiki-git" \
+	xcd='cd "$(xplr --print-pwd-as-result)"'
