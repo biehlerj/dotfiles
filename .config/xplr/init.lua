@@ -2598,3 +2598,39 @@ end
 -- You can also use nested tables such as
 -- `xplr.fn.custom.my_plugin.my_function` to define custom functions.
 xplr.fn.custom = {}
+
+-- xpm setup
+local home = os.getenv("HOME")
+local xpm_path = home .. "/.local/share/xplr/dtomvan/xpm.xplr"
+local xpm_url = "https://github.com/dtomvan/xpm.xplr"
+
+package.path = package.path
+  .. ";"
+  .. xpm_path
+  .. "/?.lua;"
+  .. xpm_path
+  .. "/?/init.lua"
+
+os.execute(
+  string.format(
+    "[ -e '%s' ] || git clone '%s' '%s'",
+    xpm_path,
+    xpm_url,
+    xpm_path
+  )
+)
+
+require("xpm").setup({
+	plugins = {
+	  -- Let xpm manage itself
+	  'dtomvan/xpm.xplr',
+	  { name = 'prncss-xyz/icons.xplr' },
+	  { name = 'sayanarijit/zoxide.xplr' },
+	  { name = 'sayanarijit/command-mode.xplr' },
+	  { name = 'sayanarijit/xclip.xplr' },
+	  { name = 'dtomvan/paste-rs.xplr' },
+	  { name = 'sayanarijit/trash-cli.xplr' },
+	},
+	auto_install = true,
+	auto_cleanup = true,
+  })
