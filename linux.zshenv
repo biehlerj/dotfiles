@@ -45,6 +45,8 @@ export NEXT_TELEMETRY_DISABLED=1
 export ASDF_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/asdf"
 export ASDF_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/asdf"
 export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/asdf/asdfrc"
+export PNPM_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/pnpm"
+export PATH="$PNPM_HOME:$PATH"
 
 # Personal path configs
 export DEV_HOME="$HOME/dev"

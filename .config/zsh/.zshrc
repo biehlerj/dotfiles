@@ -89,12 +89,6 @@ bindkey '^[[P' delete-char
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-if [ -d "$HOME/.local/share/pyenv" ]; then
-  export PATH="$HOME/.local/share/pyenv/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi
-
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 eval "$(zoxide init zsh)"
 
@@ -118,8 +112,6 @@ eval "$(starship init zsh)"
 eval "$(thefuck --alias)"
 
 eval "$(op signin)"
-
-export PATH="$PATH:/usr/local/go/bin"
 
 ${${(A)=:-pfetch neofetch}[RANDOM%2+1]}
 
