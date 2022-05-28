@@ -42,7 +42,9 @@ export DOCKER_HOST="unix://$XDG_RUNTIME_DIR/docker.sock"
 export COMPOSE_HTTP_TIMEOUT=120
 export RANGER_LOAD_DEFAULT_RC=false
 export NEXT_TELEMETRY_DISABLED=1
-export FNM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/fnm"
+export ASDF_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/asdf"
+export ASDF_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/asdf"
+export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/asdf/asdfrc"
 
 # Personal path configs
 export DEV_HOME="$HOME/dev"

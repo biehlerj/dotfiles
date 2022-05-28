@@ -15,6 +15,11 @@ HISTFILE=~/.cache/zsh/history
 # Load lf icons file if it exists
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/lf_icons" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/lf_icons"
 
+# asdf setup
+. "${ASDF_DIR:-$HOME/.local/share/asdf}/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
 # Basic auto/tab complete:
 autoload -Uz compinit
 zstyle ':completion:*' menu select
@@ -83,10 +88,6 @@ bindkey '^[[P' delete-char
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
-
-# fnm
-export PATH="${XDG_DATA_HOME:-$HOME/.local/share}/fnm:$PATH"
-eval "`fnm env --use-on-cd`"
 
 if [ -d "$HOME/.local/share/pyenv" ]; then
   export PATH="$HOME/.local/share/pyenv/bin:$PATH"
