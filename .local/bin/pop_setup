@@ -1,0 +1,26 @@
+#!/bin/sh
+# Set's up packages needed by yadm configs on device setup
+is_root() {
+    if [ $(id -u) -ne 0 ]; then
+        echo "Run this script as root"
+        exit -1
+}
+
+is_root
+apt update
+apt upgrade
+apt install -y gnome-tweaks yadm kitty zsh exa bat fd-find btop needrestart needrestart-session podman docker docker-compose
+curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
+apt update
+apt install -y brave-browser
+curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+apt install -y ./keybase_amd64.deb
+run_keybase
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+apt update
+apt install -y gh
+add-apt-repository ppa:neovim-ppa/unstable
+apt update
+apt install -y neovim
