@@ -9,3 +9,6 @@ error_symbol = "[➜](bold red)"     # The "success_symbol" segment is being set
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
+
+[docker_context]
+disabled = true
