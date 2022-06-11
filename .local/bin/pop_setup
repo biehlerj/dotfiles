@@ -10,7 +10,7 @@ is_root() {
 is_root
 apt update
 apt upgrade -y
-apt install -y gnome-tweaks yadm kitty zsh exa bat fd-find btop needrestart needrestart-session podman docker docker-compose neofetch libcurl4-openssl-dev libssl-dev zoxide fzf cmake libgit2-dev libssh-dev speedtest-cli
+apt install -y gnome-tweaks yadm kitty zsh exa bat fd-find btop needrestart needrestart-session podman docker docker-compose neofetch libcurl4-openssl-dev libssl-dev zoxide fzf cmake libgit2-dev libssh-dev speedtest-cli thefuck
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
 apt update
@@ -25,3 +25,15 @@ apt install -y gh
 add-apt-repository ppa:neovim-ppa/unstable
 apt update
 apt install -y neovim
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | \
+ gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/$(dpkg --print-architecture) stable main" |
+ tee /etc/apt/sources.list.d/1password.list
+mkdir -p /etc/debsig/policies/AC2D62742012EA22/
+curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | \
+ tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
+mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | \
+ gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
+apt update
+apt install -y 1password-cli 1password
