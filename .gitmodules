@@ -1,15 +1,9 @@
 [submodule ".themes/Dracula"]
 	path = .themes/Dracula
 	url = https://github.com/dracula/gtk
-[submodule ".config/ranger/plugins/ranger_devicons"]
-	path = .config/ranger/plugins/ranger_devicons
-	url = https://github.com/alexanderjeurissen/ranger_devicons.git
 [submodule "vimwiki"]
 	path = vimwiki
 	url = git@github.com:biehlerj/vimwiki.git
-[submodule ".config/ranger/plugins/zoxide"]
-	path = .config/ranger/plugins/zoxide
-	url = git@github.com:jchook/ranger-zoxide.git
 [submodule ".local/bin/secret-scripts"]
 	path = .local/bin/secret-scripts
 	url = git@github.com:biehlerj/private-scripts.git
