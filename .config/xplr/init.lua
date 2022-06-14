@@ -68,7 +68,7 @@ xplr.config.general.disable_debug_error_mode = false
 -- Set it to `true` if you want to enable mouse scrolling.
 --
 -- Type: boolean
-xplr.config.general.enable_mouse = false
+xplr.config.general.enable_mouse = true
 
 -- Set it to `true` to show hidden files by default.
 --
@@ -1183,6 +1183,17 @@ xplr.config.modes.builtin.default.key_bindings.on_key["j"] = xplr.config.modes.b
 xplr.config.modes.builtin.default.key_bindings.on_key["k"] = xplr.config.modes.builtin.default.key_bindings.on_key.up
 
 xplr.config.modes.builtin.default.key_bindings.on_key["l"] = xplr.config.modes.builtin.default.key_bindings.on_key.right
+
+xplr.config.modes.builtin.default.key_bindings.on_key.X = {
+  help = "open",
+  messages = {
+    {
+      BashExecSilently = [===[
+      xdg-open "${XPLR_FOCUS_PATH:?}"
+      ]===],
+    },
+  },
+}
 
 -- The builtin debug error mode.
 --
