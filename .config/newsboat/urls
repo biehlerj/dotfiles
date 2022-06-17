@@ -1,0 +1,12 @@
+http://lukesmith.xyz/rss.xml "blog"
+https://mises.org/feed/rss.xml
+https://usn.ubuntu.com/rss.xml "tech"
+https://ubuntu.com/security/notices/rss.xml "tech"
+https://newsboat.org/news.atom "tech"
+https://notrelated.libsyn.com/rss "podcast"
+https://jordanbpetersonpodcast.libsyn.com/rss
+https://tomwoodsshow.libsyn.com/rss "podcast"
+https://mises.org/feed/442/blog.rss "podcast"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)"
+https://videos.lukesmith.xyz/feeds/videos.xml?accountId=3 "~Luke Smith (Peertube)"
+https://inteltechniques.com/blog/feed/
