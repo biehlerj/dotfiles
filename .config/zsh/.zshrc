@@ -15,6 +15,10 @@ HISTFILE=~/.cache/zsh/history
 # Load lf icons file if it exists
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/lf_icons" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/lf_icons"
 
+if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+	export MOZ_ENABLE_WAYLAND=1
+fi
+
 # asdf setup
 . "${ASDF_DIR:-$HOME/.local/share/asdf}/asdf.sh"
 # append completions to fpath
