@@ -14,7 +14,7 @@ This repository contains my dotfiles managed with [yadm](https://yadm.io/). My d
 
 ## How to install my dotfiles
 
-Make sure yadm is installed and run `yadm clone --bootstrap https://github.com/biehlerj/dotfiles.git`
+Make sure yadm is installed and run `yadm clone --bootstrap git@git.sr.ht:~biehlerj/dotfiles`
 
 ## `gh` Extensions I use
 
