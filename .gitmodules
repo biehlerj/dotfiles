@@ -3,10 +3,10 @@
 	url = https://github.com/dracula/gtk
 [submodule "vimwiki"]
 	path = vimwiki
-	url = git@github.com:biehlerj/vimwiki.git
+	url = git@git.sr.ht:biehlerj/vimwiki.git
 [submodule ".local/bin/secret-scripts"]
 	path = .local/bin/secret-scripts
-	url = git@github.com:biehlerj/private-scripts.git
+	url = git@git.sr.ht:biehlerj/private-scripts.git
 [submodule ".config/zathura/catppuccin"]
 	path = .config/zathura/catppuccin
 	url = https://github.com/catppuccin/zathura.git
