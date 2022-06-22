@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This repository contains my dotfiles managed with [yadm](https://yadm.io/). My dotfiles have been tested the most on my laptop running Pop!_OS 21.04, but do work on Arch and Artix as well.
+This repository contains my dotfiles managed with [yadm](https://yadm.io/). My dotfiles have been tested the most on my laptop running Pop!_OS 22.04, but do work on Arch and Artix as well.
 
 ## How to install my dotfiles
 
