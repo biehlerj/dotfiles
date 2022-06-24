@@ -50,7 +50,7 @@ export PATH="$PNPM_HOME:$PATH"
 
 # Personal path configs
 export DEV_HOME="$HOME/dev"
-export DOTFILES_HOME="$DEV_HOME/github.com/biehlerj/dotfiles"
+export DOTFILES_HOME="$DEV_HOME/git.sr.ht/biehlerj/dotfiles"
 
 # Vultr API Key using 1Password
 export VULTR_API_KEY=op://dev/Vultr/Keys/VULTR_API_KEY
