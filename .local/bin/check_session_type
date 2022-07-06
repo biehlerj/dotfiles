@@ -1,0 +1,3 @@
+#!/bin/sh
+# Checks the current session type
+echo $XDG_SESSION_TYPE
