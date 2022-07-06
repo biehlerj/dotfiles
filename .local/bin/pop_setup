@@ -16,7 +16,7 @@ add-apt-repository ppa:neovim-ppa/unstable
 apt update
 apt install -y neovim
 curl -sS https://starship.rs/install.sh | sh
-deb-get install 1password brave-browser code discord docker-ce duf gh git-delta insomnia keybase obsidian signal-desktop slack-desktop spotify-client yq
+deb-get install 1password brave-browser code discord docker-ce duf gh git-delta insomnia keybase obsidian signal-desktop slack-desktop spotify-client
 apt install -y 1password-cli
 cp /usr/bin/fdfind /usr/local/bin/fd
 cp /usr/bin/batcat /usr/local/bin/bat
