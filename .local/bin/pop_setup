@@ -10,7 +10,7 @@ is_root() {
 is_root
 apt update
 apt upgrade -y
-apt install -y gnome-tweaks yadm kitty zsh exa bat fd-find btop needrestart needrestart-session podman docker docker-compose neofetch libcurl4-openssl-dev libssl-dev zoxide fzf cmake libgit2-dev libssh-dev speedtest-cli thefuck curl ripgrep pulsemixer mouse-configurator system76-keyboard-configurator texlive-full jq zathura calibre transmission transmission-gtk transmission-cli mpv 
+apt install -y gnome-tweaks yadm kitty zsh exa bat fd-find btop needrestart needrestart-session podman docker docker-compose neofetch libcurl4-openssl-dev libssl-dev zoxide fzf cmake libgit2-dev libssh-dev speedtest-cli thefuck curl ripgrep pulsemixer mouse-configurator system76-keyboard-configurator texlive-full jq zathura calibre transmission transmission-gtk transmission-cli mpv hugo
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get
 add-apt-repository ppa:neovim-ppa/unstable
 apt update
