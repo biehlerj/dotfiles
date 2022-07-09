@@ -10,13 +10,13 @@ is_root() {
 is_root
 apt update
 apt upgrade -y
-apt install -y gnome-tweaks yadm kitty zsh exa bat fd-find btop needrestart needrestart-session podman docker docker-compose neofetch libcurl4-openssl-dev libssl-dev zoxide fzf cmake libgit2-dev libssh-dev speedtest-cli thefuck curl ripgrep pulsemixer mouse-configurator system76-keyboard-configurator texlive-full jq zathura
+apt install -y gnome-tweaks yadm kitty zsh exa bat fd-find btop needrestart needrestart-session podman docker docker-compose neofetch libcurl4-openssl-dev libssl-dev zoxide fzf cmake libgit2-dev libssh-dev speedtest-cli thefuck curl ripgrep pulsemixer mouse-configurator system76-keyboard-configurator texlive-full jq zathura calibre transmission transmission-gtk transmission-cli mpv 
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get
 add-apt-repository ppa:neovim-ppa/unstable
 apt update
 apt install -y neovim
 curl -sS https://starship.rs/install.sh | sh
-deb-get install 1password brave-browser code discord docker-ce duf gh git-delta insomnia keybase obsidian signal-desktop slack-desktop spotify-client
+deb-get install 1password brave-browser code discord docker-ce duf gh git-delta insomnia keybase obsidian signal-desktop slack-desktop spotify-client wire-desktop element-desktop
 apt install -y 1password-cli
 cp /usr/bin/fdfind /usr/local/bin/fd
 cp /usr/bin/batcat /usr/local/bin/bat
