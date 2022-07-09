@@ -41,4 +41,5 @@ alias \
 	vs="v -O" \
 	sp="v -o" \
 	vwg="vimwiki-git" \
-	xcd='cd "$(xplr --print-pwd-as-result)"'
+	xcd='cd "$(xplr --print-pwd-as-result)"' \
+	ssr="scriptvim"

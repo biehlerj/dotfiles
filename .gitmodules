@@ -7,9 +7,12 @@
 [submodule ".config/zathura/catppuccin"]
 	path = .config/zathura/catppuccin
 	url = https://github.com/catppuccin/zathura.git
+	branch = main
 [submodule ".config/btop/themes/catppuccin"]
 	path = .config/btop/themes/catppuccin
 	url = https://github.com/catppuccin/btop.git
+	branch = main
 [submodule ".config/cointop/colors"]
 	path = .config/cointop/colors
 	url = git@github.com:cointop-sh/colors.git
+	branch = master
