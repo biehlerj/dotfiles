@@ -1,6 +1,3 @@
-[submodule ".themes/Dracula"]
-	path = .themes/Dracula
-	url = https://github.com/dracula/gtk
 [submodule "vimwiki"]
 	path = vimwiki
 	url = git@git.sr.ht:biehlerj/vimwiki
