@@ -38,7 +38,6 @@ cleanup = true
 #max_concurrency = 5
 # Additional git repositories to pull
 repos = [
-    "~/dev/git.sr.ht/biehlerj/obsidian/",
     "~/.config/btop/themes/catppuccin/",
     "~/.config/zathura/catppuccin/",
     "~/.config/cointop/colors/",
