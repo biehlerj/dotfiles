@@ -56,7 +56,6 @@ export DOTFILES_HOME="$DEV_HOME/git.sr.ht/biehlerj/dotfiles"
 export VULTR_API_KEY=op://dev/Vultr/Keys/VULTR_API_KEY
 
 # Set default apps
-export BROWSER="brave-browser"
 export COLORTERM="truecolor"
 export EDITOR="nvim"
 export IMAGE="sxiv"
