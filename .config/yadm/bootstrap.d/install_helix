@@ -1,0 +1,11 @@
+#!/bin/sh
+# Installs helix editor
+mkdir -p $HOME/dev/github.com/helix-editor
+git clone https://github.com/helix-editor/helix
+cd helix
+cargo install --path helix-term
+ln -s $PWD/runtime ~/.config/helix/runtime
+mkdir -p $HOME/dev/github.com/catppuccin
+git clone https://github.com/catppuccin/helix.git
+cd helix
+cp -r themes/default $HOME/.config/helix/themes
