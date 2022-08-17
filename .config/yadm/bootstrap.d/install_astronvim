@@ -1,5 +1,0 @@
-#!/bin/sh
-# Script to install AstroNvim with my personal configs
-git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-git clone git@git.sr.ht:~biehlerj/astronvim_config ~/.config/nvim/lua/user
-nvim  --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
