@@ -7,6 +7,7 @@
   ; gpgsign = true
 [core]
   pager = delta
+  editor = code --wait
 [interactive]
   diffFilter = delta --color-only
 [delta]
@@ -14,9 +15,11 @@
   line-numbers-left-format = ""
   line-numbers-right-format = "| "
   syntax-theme = Dracula
-[mergetool "nvim"]
-  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 [pull]
   rebase = true
 [init]
-	defaultBranch = master
+  defaultBranch = master
