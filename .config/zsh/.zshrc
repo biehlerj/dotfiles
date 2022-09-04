@@ -96,6 +96,8 @@ bindkey '^e' edit-command-line
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 eval "$(zoxide init zsh)"
 
+export PATH="$PATH:$HOME/.spicetify"
+
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 source ~/.config/zsh/plugins/git.zsh
 source ~/.config/zsh/plugins/git.plugin.zsh
