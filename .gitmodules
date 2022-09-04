@@ -17,3 +17,7 @@
 	path = .config/cointop/colors
 	url = git@github.com:cointop-sh/colors.git
 	branch = master
+[submodule ".config/kitty/themes/catppuccin"]
+	path = .config/kitty/themes/catppuccin
+	url = https://github.com/catppuccin/kitty.git
+	branch = main

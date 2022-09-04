@@ -42,7 +42,8 @@ repos = [
     "~/.config/zathura/catppuccin/",
     "~/.config/cointop/colors/",
     "~/.local/bin/secret-scripts/",
-    "~/.config/nvim/lua/user/"
+    "~/.config/nvim/lua/user/",
+    "~/.config/kitty/themes/catppuccin"
 ]
 
 # Don't pull the predefined git repos
