@@ -2,9 +2,9 @@
 # Gets Catppuccin purple theme and extracts it to $HOME/.themes directory
 echo "Getting Catppuccin purple theme"
 
-curl -L https://github.com/catppuccin/gtk/releases/latest/download/Catppuccin-purple.zip --create-dirs -o ~/Downloads/zips/Catppuccin-purple.zip
+curl -L https://github.com/catppuccin/gtk/releases/latest/download/Catppuccin-Mocha-Lavender.zip --create-dirs -o ~/Downloads/zips/Catppuccin-Mocha-Lavender.zip
 
 echo "Unzipping theme"
-unzip ~/Downloads/zips/Catppuccin-purple.zip -d ~/.themes
+unzip ~/Downloads/zips/Catppuccin-Mocha-Lavender.zip -d ~/.local/share/themes
 
 echo "Themes have been unzipped and are now ready to use"
