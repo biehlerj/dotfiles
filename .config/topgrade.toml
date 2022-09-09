@@ -43,7 +43,11 @@ repos = [
     "~/.config/cointop/colors/",
     "~/.local/bin/secret-scripts/",
     "~/.config/nvim/lua/user/",
-    "~/.config/kitty/themes/catppuccin"
+    "~/.config/kitty/themes/catppuccin",
+    "~/dev/github.com/catppuccin/cursors",
+    "~/dev/github.com/catppuccin/papirus-folders",
+    "~/dev/github.com/catppuccin/spicetify",
+    "~/dev/github.com/catppuccin/helix"
 ]
 
 # Don't pull the predefined git repos
