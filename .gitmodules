@@ -1,9 +1,10 @@
 [submodule "vimwiki"]
 	path = vimwiki
-	url = git@git.sr.ht:~biehlerj/vimwiki
+	url = git@github.com:biehlerj/vimwiki
+	branch = master
 [submodule ".local/bin/secret-scripts"]
 	path = .local/bin/secret-scripts
-	url = git@git.sr.ht:~biehlerj/private-scripts
+	url = git@github.com:biehlerj/private-scripts
 	branch = master
 [submodule ".config/zathura/catppuccin"]
 	path = .config/zathura/catppuccin
