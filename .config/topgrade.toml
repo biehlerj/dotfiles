@@ -42,7 +42,6 @@ repos = [
     "~/.config/zathura/catppuccin/",
     "~/.config/cointop/colors/",
     "~/.local/bin/secret-scripts/",
-    "~/.config/nvim/lua/user/",
     "~/.config/kitty/themes/catppuccin",
     "~/dev/github.com/catppuccin/cursors",
     "~/dev/github.com/catppuccin/papirus-folders",
