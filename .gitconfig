@@ -30,3 +30,4 @@
 	reflogExpireUnreachable = 90
 [gpg "ssh"]
 	program = /opt/1Password/op-ssh-sign
+	allowedSignersFile = /home/biehlerj/.ssh/allowed_signers
