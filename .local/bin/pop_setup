@@ -1,23 +1,28 @@
 #!/bin/sh
 # Set's up packages needed by yadm configs on device setup
 is_root() {
-    if [ $(id -u) -ne 0 ]; then
+    if [ "$(id -u)" -ne 0 ]; then
         echo "Run this script as root"
-        exit -1
+        exit 1
     fi
 }
 
 is_root
 apt update
 apt upgrade -y
-apt install -y gnome-tweaks yadm kitty zsh exa needrestart needrestart-session podman docker-compose neofetch libcurl4-openssl-dev libssl-dev zoxide fzf cmake libgit2-dev libssh-dev speedtest-cli thefuck curl ripgrep pulsemixer mouse-configurator system76-keyboard-configurator texlive-full jq zathura calibre transmission transmission-gtk transmission-cli mpv hugo
-curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get
+apt install -y gnome-tweaks yadm kitty zsh exa needrestart needrestart-session \
+    podman docker-compose neofetch libcurl4-openssl-dev libssl-dev zoxide fzf \
+    cmake libgit2-dev libssh-dev speedtest-cli thefuck curl ripgrep pulsemixer \
+    mouse-configurator system76-keyboard-configurator texlive-full jq zathura \
+    calibre transmission transmission-gtk transmission-cli mpv hugo \
+    golang-docker-credential-helpers
 curl -sS https://starship.rs/install.sh | sh
-deb-get install 1password bat brave-browser code discord docker-ce duf fd gh git-delta insomnia keybase obsidian signal-desktop slack-desktop spotify-client wire-desktop element-desktop papirus-icon-theme pandoc docker-desktop appimagelauncher
+curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get
+deb-get install 1password bat brave-browser code discord docker-ce duf fd gh \
+    git-delta insomnia keybase obsidian signal-desktop slack-desktop \
+    spotify-client wire-desktop element-desktop papirus-icon-theme pandoc \
+    docker-desktop appimagelauncher
 apt install -y 1password-cli
 sh -c "$(curl -sL https://nextdns.io/install)"
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
-add-apt-repository ppa:chronobserver/betterdiscordctl
-apt update
-apt install -y betterdiscordctl

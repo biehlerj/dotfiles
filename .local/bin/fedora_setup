@@ -3,14 +3,17 @@
 #!/bin/sh
 # Set's up packages needed by yadm configs on device setup
 is_root() {
-    if [ $(id -u) -ne 0 ]; then
+    if [ "$(id -u)" -ne 0 ]; then
         echo "Run this script as root"
-        exit -1
+        exit 1
     fi
 }
 
 is_root
-dnf install -y gnome-tweaks kitty zsh exa bat fd-find btop needrestart docker-compose neofetch libgit2-devel libssh2-devel openssl-devel pkg-config starship duf git-delta texlive gh ripgrep
+dnf install -y gnome-tweaks kitty zsh exa bat fd-find btop needrestart \
+    docker-compose golang-docker-credential-helpers neofetch \
+    libgit2-devel libssh2-devel openssl-devel pkg-config \
+    starship duf git-delta texlive gh ripgrep
 dnf update -y
 dnf copr enable varlad/helix
 dnf install helix
