@@ -11,9 +11,8 @@ is_root() {
 
 is_root
 dnf install -y gnome-tweaks kitty zsh exa bat fd-find btop needrestart \
-    docker-compose golang-docker-credential-helpers neofetch \
-    libgit2-devel libssh2-devel openssl-devel pkg-config \
-    starship duf git-delta texlive gh ripgrep
+    docker-compose neofetch libgit2-devel libssh2-devel openssl-devel \
+    pkg-config starship duf git-delta texlive gh ripgrep
 dnf update -y
 dnf copr enable varlad/helix
 dnf install helix
