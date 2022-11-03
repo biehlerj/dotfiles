@@ -53,7 +53,7 @@ export DEV_HOME="$HOME/dev"
 export DOTFILES_HOME="$DEV_HOME/git.sr.ht/biehlerj/dotfiles"
 
 # Vultr API Key using 1Password
-export VULTR_API_KEY=op://dev/Vultr/Keys/VULTR_API_KEY
+export VULTR_API_KEY=op://Personal/Vultr/Keys/VULTR_API_KEY
 
 # Set default apps
 export BROWSER="brave-browser"
