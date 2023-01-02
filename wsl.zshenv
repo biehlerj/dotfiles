@@ -57,7 +57,7 @@ export VULTR_API_KEY=op://dev/Vultr/Keys/VULTR_API_KEY
 
 # Set default apps
 export COLORTERM="truecolor"
-export EDITOR="hx"
+export EDITOR="nvim"
 export IMAGE="sxiv"
 export OPENER="xdg-open"
 export PAGER="less"
