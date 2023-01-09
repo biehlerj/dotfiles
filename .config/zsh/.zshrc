@@ -110,14 +110,16 @@ else
 fi
 source ~/.config/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.config/zsh/plugins/command-not-found.plugin.zsh
-source ~/.config/zsh/plugins/1password.plugin.zsh
 fpath=("$HOME/.config/zsh/plugins/zsh-completions/src" $fpath)
 fpath=("$HOME/.config/zsh/completion" $fpath)
 eval "$(starship init zsh)"
 
 eval "$(thefuck --alias)"
 
+# 1Password Setup
 eval "$(op signin)"
+source ~/.config/zsh/plugins/1password.plugin.zsh
+source "${XDG_CONFIG_HOME:-$HOME/.config}/op/plugins.sh"
 
 ${${(A)=:-pfetch neofetch}[RANDOM%2+1]}
 
