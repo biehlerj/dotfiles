@@ -98,6 +98,12 @@ eval "$(zoxide init zsh)"
 
 export PATH="$PATH:$HOME/.spicetify"
 
+# Add Flutter to PATH if directory exists
+[ -d "$HOME/bin/flutter/" ] && export PATH="$PATH:$HOME/bin/flutter/bin"
+# Android SDK setup
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin"
+
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 source ~/.config/zsh/plugins/git.zsh
 source ~/.config/zsh/plugins/git.plugin.zsh
