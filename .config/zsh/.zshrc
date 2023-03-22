@@ -127,7 +127,7 @@ eval "$(op signin)"
 source ~/.config/zsh/plugins/1password.plugin.zsh
 source "${XDG_CONFIG_HOME:-$HOME/.config}/op/plugins.sh"
 
-${${(A)=:-pfetch neofetch}[RANDOM%2+1]}
+${${(A)=:-pfetch neofetch fastfetch}[RANDOM%3+1]}
 
 # Source funky shell functions
 [ -f ~/.local/share/funky/funky.sh ] && source ~/.local/share/funky/funky.sh
