@@ -47,10 +47,11 @@ skip_notify = true
 [git]
 #max_concurrency = 5
 # Additional git repositories to pull
-#repos = [
-#    "~/src/*/",
-#    "~/.config/something"
-#]
+repos = [
+    "~/.config/nvim",
+    "~/.local/bin/secret-scripts/",
+    "~/dev/github.com/biehlerj/*",
+]
 
 # Don't pull the predefined git repos
 #pull_predefined = false

@@ -35,8 +35,6 @@ set_title = false
 cleanup = true
 
 [git]
-#max_concurrency = 5
-# Additional git repositories to pull
 repos = [
     "~/.config/btop/themes/catppuccin/",
     "~/.config/zathura/catppuccin/",
@@ -47,8 +45,11 @@ repos = [
     "~/dev/github.com/catppuccin/cursors",
     "~/dev/github.com/catppuccin/papirus-folders",
     "~/dev/github.com/catppuccin/spicetify",
-    "~/dev/github.com/catppuccin/helix"
-]
+    "~/dev/github.com/catppuccin/helix",
+    "~/dev/github.com/biehlerj/*",
+
+]#max_concurrency = 5
+# Additional git repositories to pull
 
 # Don't pull the predefined git repos
 #predefined_repos = false
