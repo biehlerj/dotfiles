@@ -24,6 +24,10 @@ fi
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 
+# fnm
+export PATH="${XDG_DATA_HOME:-$HOME/.local/share}/fnm:$PATH"
+eval "$(fnm env --use-on-cd)"
+
 # Basic auto/tab complete:
 autoload -Uz compinit
 zstyle ':completion:*' menu select
