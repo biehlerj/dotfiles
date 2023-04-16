@@ -18,7 +18,7 @@ apt install -y gnome-tweaks yadm kitty zsh exa needrestart needrestart-session \
     golang-docker-credential-helpers
 curl -sS https://starship.rs/install.sh | sh
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get
-deb-get install 1password bat brave-browser code discord docker-ce duf fd gh \
+deb-get install 1password bat code discord docker-ce duf fd gh \
     git-delta insomnia keybase obsidian signal-desktop slack-desktop \
     spotify-client wire-desktop element-desktop papirus-icon-theme pandoc \
     docker-desktop appimagelauncher
