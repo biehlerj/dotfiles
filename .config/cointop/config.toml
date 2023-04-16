@@ -1,4 +1,4 @@
-currency = "SATS"
+currency = "USD"
 default_view = "default"
 default_chart_range = "1Y"
 api = "coingecko"
@@ -99,12 +99,12 @@ enable_mouse = true
   character = "*"
   columns = ["rank", "name", "symbol", "price", "1h_change", "24h_change", "7d_change", "24h_volume", "market_cap", "available_supply", "total_supply", "last_updated"]
   compact_notation = false
-  names = ["Basic Attention Token", "Dash", "Ethereum", "LBRY Credits", "Theta Network"]
+  names = ["Bitcoin", "Dash", "Ethereum", "LBRY Credits", "Monero", "Theta Network"]
 
 [portfolio]
   columns = ["rank", "name", "symbol", "price", "holdings", "balance", "1h_change", "24h_change", "7d_change", "percent_holdings", "cost_price", "cost", "pnl", "pnl_percent", "last_updated"]
   compact_notation = false
-  holdings = [["Basic Attention Token", "246.07434", "0", ""], ["Dash", "0.00032", "0", ""], ["LBRY Credits", "170.7310185", "0", ""]]
+  holdings = [["Dash", "0.00032", "0", ""], ["LBRY Credits", "170.7310185", "0", ""]]
 
 [price_alerts]
   alerts = []
