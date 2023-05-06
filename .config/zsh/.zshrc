@@ -79,7 +79,11 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 source "$(redo alias-file)"
 bindkey -s '^r' 'redo\n'
 
-bindkey -s '^o' 'xcd\n'
+LFCD="$HOME/.config/lf/lfcd.sh"
+if [ -f "$LFCD" ]; then
+	source "$LFCD"
+fi
+bindkey -s '^o' 'lfcd\n'
 
 bindkey -s '^h' 'bc -l\n'
 
@@ -133,6 +137,7 @@ source ~/.config/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.config/zsh/plugins/command-not-found.plugin.zsh
 fpath=("$HOME/.config/zsh/plugins/zsh-completions/src" $fpath)
 fpath=("$HOME/.config/zsh/completion" $fpath)
+fpath=("$HOME/.config/zsh/completion/_poetry" $fpath)
 eval "$(starship init zsh)"
 
 eval "$(thefuck --alias)"
