@@ -33,6 +33,7 @@ alias \
 	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
 	btm="btm -g --battery" \
 	cnp="commitandpush" \
+	dp="dotfilespush" \
 	sp="speedtest" \
 	up="topgrade" \
 	rr="SHELL=$HOME/.local/bin/r.shell ranger" \
