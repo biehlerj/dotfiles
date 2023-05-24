@@ -35,7 +35,6 @@ alias \
 	cnp="commitandpush" \
 	sp="speedtest" \
 	up="topgrade" \
-	pop_os_up="deb-get update ; up" \
 	rr="SHELL=$HOME/.local/bin/r.shell ranger" \
 	vs="v -O" \
 	sp="v -o" \
