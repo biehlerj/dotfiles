@@ -156,9 +156,6 @@ source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
-
 # pnpm
 export PNPM_HOME="/home/biehlerj/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
