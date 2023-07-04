@@ -94,19 +94,19 @@ bindkey -s '^n' 'v\n'
 bindkey '^[[P' delete-char
 
 # Easy encrypting and decrypting with gpg
-secret () {
-        output=~/"${1}".$(date +%s).enc
-        gpg --encrypt --armor --output ${output} -r 0x0000 -r 0x0001 -r 0x0002 "${1}" && echo "${1} -> ${output}"
-}
+# secret () {
+#         output=~/"${1}".$(date +%s).enc
+#         gpg --encrypt --armor --output ${output} -r 0x0000 -r 0x0001 -r 0x0002 "${1}" && echo "${1} -> ${output}"
+# }
 
-reveal () {
-        output=$(echo "${1}" | rev | cut -c16- | rev)
-        gpg --decrypt --output ${output} "${1}" && echo "${1} -> ${output}"
-}
+# reveal () {
+#         output=$(echo "${1}" | rev | cut -c16- | rev)
+#         gpg --decrypt --output ${output} "${1}" && echo "${1} -> ${output}"
+# }
 
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
+# export GPG_TTY="$(tty)"
+# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+# gpgconf --launch gpg-agent
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
@@ -130,8 +130,6 @@ if [[ "$(command -v apt)" || "$(command -v apt-get)" ]]; then
   source ~/.config/zsh/plugins/ubuntu.plugin.zsh
 elif [[ "$(command -v dnf)" || "$(command -v yum)" ]]; then
   source ~/.config/zsh/plugins/dnf.plugin.zsh
-else
-  source ~/.config/zsh/plugins/archlinux.plugin.zsh
 fi
 source ~/.config/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source ~/.config/zsh/plugins/command-not-found.plugin.zsh
@@ -140,12 +138,14 @@ fpath=("$HOME/.config/zsh/completion" $fpath)
 fpath=("$HOME/.config/zsh/completion/_poetry" $fpath)
 eval "$(starship init zsh)"
 
-eval "$(thefuck --alias)"
+# eval "$(thefuck --alias)"
 
 # 1Password Setup
-eval "$(op signin)"
-source ~/.config/zsh/plugins/1password.plugin.zsh
-source "${XDG_CONFIG_HOME:-$HOME/.config}/op/plugins.sh"
+if [ -d "$$HOME/.config/op/" ]; then
+  eval "$(op signin)"
+  source ~/.config/zsh/plugins/1password.plugin.zsh
+  source "${XDG_CONFIG_HOME:-$HOME/.config}/op/plugins.sh"
+fi
 
 ${${(A)=:-pfetch neofetch fastfetch}[RANDOM%3+1]}
 
