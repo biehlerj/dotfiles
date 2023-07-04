@@ -1,0 +1,22 @@
+#!/bin/sh
+# Setup script for openSUSE
+is_root() {
+    if [ "$(id -u)" -ne 0 ]; then
+        echo "Run this script as root"
+        exit 1
+    fi
+}
+
+is_root
+zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
+zypper addrepo https://download.opensuse.org/repositories/shells:zsh-users:zsh-syntax-highlighting/openSUSE_Tumbleweed/shells:zsh-users:zsh-syntax-highlighting.repo
+zypper refresh
+zypper install -y yadm zsh fd zypper-needs-restarting docker \
+    docker-zsh-completion docker-credential-secretservice docker-compose \
+    neofetch libcurl-devel libopenssl-devel libssh-devel fzf fzf-zsh-completion \
+    cmake libgit2-devel ripgrep ripgrep-zsh-completion jq exa \
+    exa-zsh-completion hugo texlive bat bat-zsh-completion starship \
+    zoxide neovim python311-neovim duf git-delta pandoc yq rustup \
+    yq-zsh-completion gh zsh-syntax-highlighting
+zypper install -t pattern devel_basis
+git clone https://github.com/asdf-vm/asdf.git ~/.local/share/asdf --branch v0.12.0
