@@ -25,6 +25,7 @@ set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 set drawbox
+set autoquit true
 
 # cmds/functions
 cmd open ${{
@@ -123,6 +124,8 @@ map b $setbg $f
 map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
+
+map . set hidden!
 
 map W $setsid -f $TERMINAL >/dev/null 2>&1
 
