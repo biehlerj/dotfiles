@@ -31,11 +31,11 @@ zmodload zsh/complist
 compinit -i
 _comp_options+=(globdots)		# Include hidden files.
 
-# Change from ls to exa
-if [ "$(command -v exa)" ]; then
+# Change from ls to eza
+if [ "$(command -v eza)" ]; then
 	unalias -m 'ls'
-	alias ls='exa -G --color auto --icons -a -s type'
-	alias ll='exa -l --color always --icons -a -s type'
+	alias ls='eza -G --color auto --icons -a -s type'
+	alias ll='eza -l --color always --icons -a -s type'
 fi
 
 # Change from cat to bat

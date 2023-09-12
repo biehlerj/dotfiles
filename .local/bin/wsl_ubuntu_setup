@@ -13,6 +13,10 @@ apt upgrade -y
 apt install -y zsh fd-find needrestart needrestart-session docker docker-compose \
     golang-docker-credential-helpers neofetch libcurl4-openssl-dev libssl-dev fzf \
     cmake libgit2-dev libssh-dev speedtest-cli build-essential checkinstall thefuck \
-    ripgrep jq hugo texlive-full exa zoxide
+    ripgrep jq hugo texlive-full zoxide
 deb-get install neovim 1password bat duf fd git-delta pandoc docker-ce yq
 apt install -y 1password-cli
+wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo tee /etc/apt/trusted.gpg.d/gierens.asc
+echo "deb http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+apt update
+apt install -y eza

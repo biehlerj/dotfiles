@@ -10,7 +10,7 @@ is_root() {
 }
 
 is_root
-dnf install -y gnome-tweaks kitty zsh exa bat fd-find btop needrestart \
+dnf install -y gnome-tweaks kitty zsh bat fd-find btop needrestart \
     docker-compose neofetch libgit2-devel libssh2-devel openssl-devel \
     pkg-config starship duf git-delta texlive gh ripgrep
 rpm --import https://downloads.1password.com/linux/keys/1password.asc
@@ -26,8 +26,16 @@ gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 EOF
 dnf install -y code
-sh -c "$(curl -sL https://nextdns.io/install)"
-sudo yum install https://prerelease.keybase.io/keybase_amd64.rpm
+tee /etc/yum.repos.d/opensuse-tumbleweed-oss.repo <<EOL
+[opensuse-tumbleweed-oss]
+name=OpenSUSE Tumbleweed OSS
+baseurl=https://download.opensuse.org/tumbleweed/repo/oss/
+enabled=1
+gpgcheck=1
+gpgkey=https://download.opensuse.org/tumbleweed/repo/oss/repodata/repomd.xml.key
+EOL
+dnf install eza
+yum install https://prerelease.keybase.io/keybase_amd64.rpm
 run_keybase
 dnf config-manager --add-repo https://download.opensuse.org/repositories/home:TheLocehiliosan:yadm/Fedora_35/home:TheLocehiliosan:yadm.repo
 dnf install yadm dnf-plugins-core

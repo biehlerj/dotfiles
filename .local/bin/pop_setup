@@ -10,7 +10,7 @@ is_root() {
 is_root
 apt update
 apt upgrade -y
-apt install -y gnome-tweaks yadm kitty zsh exa needrestart needrestart-session \
+apt install -y gnome-tweaks yadm kitty zsh needrestart needrestart-session \
     podman docker-compose neofetch libcurl4-openssl-dev libssl-dev zoxide fzf \
     cmake libgit2-dev libssh-dev speedtest-cli thefuck curl ripgrep pulsemixer \
     mouse-configurator system76-keyboard-configurator texlive-full jq zathura \
@@ -23,6 +23,9 @@ deb-get install 1password bat code discord docker-ce duf fd gh \
     spotify-client wire-desktop element-desktop papirus-icon-theme pandoc \
     docker-desktop appimagelauncher
 apt install -y 1password-cli
-sh -c "$(curl -sL https://nextdns.io/install)"
+wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo tee /etc/apt/trusted.gpg.d/gierens.asc
+echo "deb http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+apt update
+apt install -y eza
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
 curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh

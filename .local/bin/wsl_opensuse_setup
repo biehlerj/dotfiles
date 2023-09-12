@@ -14,9 +14,11 @@ zypper refresh
 zypper install -y yadm zsh fd zypper-needs-restarting docker \
     docker-zsh-completion docker-credential-secretservice docker-compose \
     neofetch libcurl-devel libopenssl-devel libssh-devel fzf fzf-zsh-completion \
-    cmake libgit2-devel ripgrep ripgrep-zsh-completion jq exa \
+    cmake libgit2-devel ripgrep ripgrep-zsh-completion jq \
     exa-zsh-completion hugo texlive bat bat-zsh-completion starship \
     zoxide neovim python311-neovim duf git-delta pandoc yq rustup \
     yq-zsh-completion gh zsh-syntax-highlighting
 zypper install -t pattern devel_basis
+zypper addrepo https://download.opensuse.org/tumbleweed/repo/oss/ factory-oss
+zypper install eza
 git clone https://github.com/asdf-vm/asdf.git ~/.local/share/asdf --branch v0.12.0
