@@ -160,3 +160,6 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PNPM_HOME="/home/biehlerj/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# bun completions
+[ -s "/home/biehlerj/.local/share/reflex/bun/_bun" ] && source "/home/biehlerj/.local/share/reflex/bun/_bun"
