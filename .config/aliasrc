@@ -42,4 +42,5 @@ alias \
 	vwg="vimwiki-git" \
 	xcd='cd "$(xplr --print-pwd-as-result)"' \
 	ssr="scriptvim" \
-	lzd="lazydocker"
+	lzd="lazydocker" \
+	uptime="uptime -p"
