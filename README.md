@@ -14,7 +14,14 @@ This repository contains my dotfiles managed with [yadm](https://yadm.io/). My d
 
 ## How to install my dotfiles
 
-Make sure yadm is installed and run `yadm clone --bootstrap git@github.com:biehlerj/dotfiles.git`
+Make sure yadm is installed and run
+
+```sh
+# SSH
+yadm clone --bootstrap git@github.com:biehlerj/dotfiles.git
+# HTTPS
+yadm clone --bootstrap https://github.com/biehlerj/dotfiles.git
+```
 
 ## `gh` Extensions I use
 
@@ -39,3 +46,10 @@ Make sure yadm is installed and run `yadm clone --bootstrap git@github.com:biehl
 With new versions of the 1Password CLI you can use `export SOME_ENVIRONMENT_VARIABLE=op://vault/item/[section/]field op run -- some command`
 
 See the [1Password Developer Documentation](https://developer.1password.com/docs/cli/secrets-environment-variables/) for more information
+
+## TODOs
+
+- Move external zsh plugins into git submodules
+- Clean up config directory to remove configs for programs I no longer use
+- Update Pop!_OS bootstrap script to use Flatpaks over `deb-get` where possible
+- Clean up .local/bin
