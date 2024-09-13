@@ -29,7 +29,6 @@ alias \
 	zt="zathura"
 
 alias \
-	magit="nvim -c MagitOnly" \
 	cnp="commitandpush" \
 	dp="dotfilespush" \
 	st="speedtest" \
