@@ -51,5 +51,5 @@ See the [1Password Developer Documentation](https://developer.1password.com/docs
 
 - [X] Move external zsh plugins into git submodules
 - [X] Clean up config directory to remove configs for programs I no longer use
-- [ ] Update Pop!_OS bootstrap script to use Flatpaks over `deb-get` where possible
-- [ ] Clean up .local/bin to remove scripts I no longer use
+- [X] Update Pop!_OS bootstrap script to use Flatpaks over `deb-get` where possible
+- [X] Clean up .local/bin to remove scripts I no longer use
