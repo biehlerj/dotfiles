@@ -49,7 +49,7 @@ See the [1Password Developer Documentation](https://developer.1password.com/docs
 
 ## TODOs
 
-- Move external zsh plugins into git submodules
-- Clean up config directory to remove configs for programs I no longer use
-- Update Pop!_OS bootstrap script to use Flatpaks over `deb-get` where possible
-- Clean up .local/bin
+- [ ] Move external zsh plugins into git submodules
+- [ ] Clean up config directory to remove configs for programs I no longer use
+- [ ] Update Pop!_OS bootstrap script to use Flatpaks over `deb-get` where possible
+- [ ] Clean up .local/bin to remove scripts I no longer use
