@@ -17,7 +17,7 @@ apt install -y gnome-tweaks yadm kitty zsh needrestart needrestart-session \
     cmake libgit2-dev libssh-dev speedtest-cli thefuck curl ripgrep pulsemixer \
     mouse-configurator system76-keyboard-configurator texlive-full jq zathura \
     calibre transmission transmission-gtk transmission-cli mpv hugo \
-    golang-docker-credential-helpers
+    golang-docker-credential-helpers youtube-dl
 curl -sS https://starship.rs/install.sh | sh
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get
 deb-get install 1password bat code docker-ce duf fd gh \
