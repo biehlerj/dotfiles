@@ -49,6 +49,8 @@ See the [1Password Developer Documentation](https://developer.1password.com/docs
 
 ## TODOs
 
+### 2024
+
 - [X] Move external zsh plugins into git submodules
 - [X] Clean up config directory to remove configs for programs I no longer use
 - [X] Update Pop!_OS bootstrap script to use Flatpaks over `deb-get` where possible
