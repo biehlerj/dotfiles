@@ -30,17 +30,12 @@ alias \
 
 alias \
 	magit="nvim -c MagitOnly" \
-	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
-	btm="btm -g --battery" \
 	cnp="commitandpush" \
 	dp="dotfilespush" \
-	sp="speedtest" \
+	st="speedtest" \
 	up="topgrade" \
-	rr="SHELL=$HOME/.local/bin/r.shell ranger" \
 	vs="v -O" \
 	sp="v -o" \
-	vwg="vimwiki-git" \
-	xcd='cd "$(xplr --print-pwd-as-result)"' \
 	ssr="scriptvim" \
 	lzd="lazydocker" \
 	uptime="uptime -p"
