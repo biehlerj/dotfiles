@@ -1,7 +1,0 @@
-#!/bin/sh
-# Creates a note with the provided string and the date it was called
-if [ -z $EDITOR ]; then
-    NOTE_EDITOR="nvim"
-fi
-NOTE_EDITOR=$EDITOR
-$NOTE_EDITOR "$(date +%F)_$1"
