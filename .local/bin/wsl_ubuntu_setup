@@ -1,5 +1,5 @@
 #!/bin/sh
-# Set's up packages needed by yadm configs on device setup for WSL Ubuntu 22.04
+# Set's up packages needed by yadm configs on device setup for WSL Ubuntu 24.04
 is_root() {
     if [ "$(id -u)" -ne 0 ]; then
         echo "Run this script as root"
@@ -10,13 +10,14 @@ is_root() {
 is_root
 apt update
 apt upgrade -y
-apt install -y zsh fd-find needrestart needrestart-session docker docker-compose \
+apt install -y zsh fd-find needrestart needrestart-session docker-compose \
     golang-docker-credential-helpers neofetch libcurl4-openssl-dev libssl-dev fzf \
     cmake libgit2-dev libssh-dev speedtest-cli build-essential checkinstall thefuck \
     ripgrep jq hugo texlive-full zoxide
-deb-get install neovim 1password bat duf fd git-delta pandoc docker-ce yq
+curl -sS https://starship.rs/install.sh | sh
+curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get
+deb-get install 1password bat duf fd git-delta pandoc docker-ce yq gh
 apt install -y 1password-cli
-wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo tee /etc/apt/trusted.gpg.d/gierens.asc
-echo "deb http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+add-apt-repository ppa:neovim-ppa/unstable
 apt update
-apt install -y eza
+apt install -y neovim
