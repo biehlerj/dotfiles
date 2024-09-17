@@ -13,7 +13,7 @@ apt upgrade -y
 apt install -y zsh fd-find needrestart needrestart-session docker-compose \
     golang-docker-credential-helpers neofetch libcurl4-openssl-dev libssl-dev fzf \
     cmake libgit2-dev libssh-dev speedtest-cli build-essential checkinstall thefuck \
-    ripgrep jq hugo texlive-full zoxide
+    ripgrep jq hugo texlive-full zoxide eza
 curl -sS https://starship.rs/install.sh | sh
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get
 deb-get install 1password bat duf fd git-delta pandoc docker-ce yq gh fastfetch
