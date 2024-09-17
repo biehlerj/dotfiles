@@ -22,7 +22,7 @@ curl -sS https://starship.rs/install.sh | sh
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get
 deb-get install 1password bat code docker-ce duf fd gh \
     git-delta insomnia keybase papirus-icon-theme pandoc \
-    docker-desktop appimagelauncher
+    docker-desktop appimagelauncher fastfetch
 apt install -y 1password-cli
 wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo tee /etc/apt/trusted.gpg.d/gierens.asc
 echo "deb http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list

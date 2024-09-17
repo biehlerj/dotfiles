@@ -16,7 +16,7 @@ apt install -y zsh fd-find needrestart needrestart-session docker-compose \
     ripgrep jq hugo texlive-full zoxide
 curl -sS https://starship.rs/install.sh | sh
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | bash -s install deb-get
-deb-get install 1password bat duf fd git-delta pandoc docker-ce yq gh
+deb-get install 1password bat duf fd git-delta pandoc docker-ce yq gh fastfetch
 apt install -y 1password-cli
 add-apt-repository ppa:neovim-ppa/unstable
 apt update
