@@ -37,4 +37,7 @@ alias \
 	sp="v -o" \
 	ssr="scriptvim" \
 	lzd="lazydocker" \
-	uptime="uptime -p"
+	uptime="uptime -p" \
+	fm="fzf-make" \
+	fr="fzf-make repeat" \
+	fh="fzf-make history"
