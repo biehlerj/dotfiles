@@ -19,8 +19,6 @@ if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 	export MOZ_ENABLE_WAYLAND=1
 fi
 
-# asdf setup
-. "${ASDF_DIR:-$HOME/.local/share/asdf}/asdf.sh"
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 
