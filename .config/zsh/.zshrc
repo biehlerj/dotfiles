@@ -19,6 +19,8 @@ if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 	export MOZ_ENABLE_WAYLAND=1
 fi
 
+# Add shims directory to PATH
+export PATH="${ASDF_DATA_DIR:-$HOME/.local/share/asdf}/shims:$PATH"
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 
