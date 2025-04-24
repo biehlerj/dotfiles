@@ -1,6 +1,0 @@
-#!/bin/sh
-# Installs helix editor
-mkdir -p $HOME/dev/github.com/catppuccin
-git clone https://github.com/catppuccin/helix.git
-cd helix
-cp -r themes/default $HOME/.config/helix/themes
