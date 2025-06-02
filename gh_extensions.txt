@@ -5,7 +5,6 @@ mislav/gh-cp
 dlvhdr/gh-dash
 kawarimidoll/gh-graph
 redraw/gh-install
-heaths/gh-label
 yusukebe/gh-markdown-preview
 dlvhdr/gh-prs
 samcoe/gh-repo-explore
