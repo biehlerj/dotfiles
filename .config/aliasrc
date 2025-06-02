@@ -32,7 +32,7 @@ alias \
 	cnp="commitandpush" \
 	dp="dotfilespush" \
 	st="speedtest" \
-	up="topgrade" \
+	up="topgrade ; date" \
 	vs="v -O" \
 	sp="v -o" \
 	ssr="scriptvim" \
@@ -40,4 +40,5 @@ alias \
 	uptime="uptime -p" \
 	fm="fzf-make" \
 	fr="fzf-make repeat" \
-	fh="fzf-make history"
+	fh="fzf-make history" \
+	dailies="c /keybase/private/biehlerj/Documents/dailies.md"	
