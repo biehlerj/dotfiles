@@ -76,8 +76,10 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-source "$(redo alias-file)"
-bindkey -s '^r' 'redo\n'
+if [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/go/bin/redo" ]; then
+	source "$(redo alias-file)"
+	bindkey -s '^r' 'redo\n'
+fi
 
 LFCD="$HOME/.config/lf/lfcd.sh"
 if [ -f "$LFCD" ]; then
@@ -155,11 +157,15 @@ ${${(A)=:-pfetch neofetch fastfetch}[RANDOM%3+1]}
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/secret.zshenv"
 
 # pnpm
 export PNPM_HOME="/home/biehlerj/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+export BUN_INSTALL="${XDG_DATA_HOME:-$HOME/.local/share}/bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bun completions
 [ -s "/home/biehlerj/.local/share/reflex/bun/_bun" ] && source "/home/biehlerj/.local/share/reflex/bun/_bun"
